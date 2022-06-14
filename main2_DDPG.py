@@ -1,12 +1,16 @@
 import gym
 from main2_Agent import Agent_DDPG
 
-env = gym.make('Pendulum-v0')
+env = gym.make('Pendulum-v1')
 env = env.unwrapped
 env.seed(1)
 s_dim = env.observation_space.shape[0]
 a_dim = env.action_space.shape[0]
 a_bound = env.action_space.high
+
+print("state_size:", s_dim)
+print("action_size:", a_dim)
+print("action_bound:", a_bound)
 
 total_episodes = 100
 total_episode_steps = 200
