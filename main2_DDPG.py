@@ -1,5 +1,6 @@
 import gym
 from main2_Agent import Agent_DDPG
+#DDPG for pendulm
 
 env = gym.make('Pendulum-v1')
 env = env.unwrapped
